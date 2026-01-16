@@ -9,7 +9,7 @@ updateDateTime();// Call it once immediately so it appears on page load
 async function getWeather(city = defaultCity) {// Async function to fetch weather data
     const cityName = document.getElementById("cityInput").value || city;// Get city name from input field, or use default city
     try {
-        const response = await fetch(`Janit_SaruMagar_2603768.php?city=${cityName}`);// Fetch one-day weather data from PHP
+        const response = await fetch(`http://localhost/Janit_SaruMagar_2603768.php?city=${cityName}`);// Fetch one-day weather data from PHP
         const data = await response.json();// Convert API response to JSON
         console.log(data);
         if (data.cod !== 200) {
