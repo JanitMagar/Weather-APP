@@ -1,4 +1,7 @@
 <?php
+header("Access-Control-Allow-Origin: *"); // Allow requests from any origin
+header("Content-Type: application/json"); // Set content type to JSON
+mysqli_report(MYSQLI_REPORT_OFF); // Disable MySQLi error reporting
 $host = "localhost";
 $username = "root";
 $password = "";
