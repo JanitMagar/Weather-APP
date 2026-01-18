@@ -27,7 +27,7 @@ $table = "CREATE TABLE IF NOT EXISTS weather (
 )";
 mysqli_query($conn, $table);
 $city = $_GET['city'] ?? 'Greenville';
-$apiKey = "274bd63b9d67a415288666e0a70b8b0a";
+$apiKey = "Your APIKEY";
 $url = "https://api.openweathermap.org/data/2.5/weather?q=$city&units=metric&appid=$apiKey";
 
 $response = file_get_contents($url);
@@ -58,3 +58,4 @@ if (mysqli_num_rows($result) == 0) {
 header('Content-Type: application/json');
 echo json_encode($data);
 ?>
+
