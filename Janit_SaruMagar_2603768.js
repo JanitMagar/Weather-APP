@@ -1,5 +1,5 @@
-const apiKey = "274bd63b9d67a415288666e0a70b8b0a";// OpenWeather API key used to authenticate requests
-const defaultCity = "Greenville";// Default city shown when the app loads
+const apiKey = "Your APIKEY";// OpenWeather API key used to authenticate requests
+const defaultCity = "DefaultCity";// Default city shown when the app loads
 function updateDateTime() {// Function to update date and time every second
     const now = new Date();// Create a new Date object with current date & time
     document.getElementById("dateTime").innerText =now.toDateString() + "| " + now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true });// Display formatted date and time in the HTML element with id
@@ -11,7 +11,7 @@ async function getWeather(city = defaultCity) {
     // Get city name from input field; if empty, use the default city
     const cityName = document.getElementById("cityInput").value || city;
     try {
-        const response = await fetch(`http://localhost/ASSESMENTS/Janit_SaruMagar_2603768.php?city=${cityName}`);
+        const response = await fetch(`PHPCONNECT FILE?city=${cityName}`);
         // Fetch weather data from the PHP backend (which calls OpenWeather API)
         const data = await response.json();// Convert the response to JSON format
         console.log(data);// Log the data to the console for debugging
