@@ -40,7 +40,7 @@ AND created_at >= NOW() - INTERVAL 2 HOUR
 ";
 
 $city = $_GET['city'] ?? 'Greenville'; // Get city from URL or default
-$apiKey = "274bd63b9d67a415288666e0a70b8b0a"; // OpenWeather API key
+$apiKey = "Your API KEY"; // OpenWeather API key
 $url = "https://api.openweathermap.org/data/2.5/weather?q=$city&units=metric&appid=$apiKey"; // API URL
 $response = file_get_contents($url); // Fetch weather data
 $data = json_decode($response, true); // Convert JSON to array
@@ -73,3 +73,4 @@ if (mysqli_num_rows($result) == 0) { // If city not stored yet
 
 echo json_encode($data); // Return weather data as JSON
 ?>
+
